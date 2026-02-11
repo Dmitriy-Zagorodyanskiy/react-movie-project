@@ -1,14 +1,15 @@
 import MovieCard from "../components/MovieCard"
 import { useState } from "react"
+import "../css/Home.css"
 
 function Home() {
     const [searchQuery, setSearchQuery] = useState("");
 
     const movies = [
-        {id: 1, title: "John1", release_date: "2020"},
-        {id: 2, title: "John2", release_date: "2020"},
-        {id: 3, title: "John3", release_date: "2020"},
-        {id: 4, title: "John4", release_date: "2020"},
+        {id: 1, title: "Harry Potter", release_date: "2020"},
+        {id: 2, title: "Terminator", release_date: "2020"},
+        {id: 3, title: "Fast & Furious", release_date: "2020"},
+        {id: 4, title: "Zootopia", release_date: "2020"},
     ]
 
     const handleSearch = (e) => {
@@ -31,7 +32,9 @@ function Home() {
 
         <div className="movies-grid">
             {movies.map((movie) => (
-                <MovieCard movie ={movie} key={movie.id} />
+                (
+                    <MovieCard movie ={movie} key={movie.id} />
+                )
             ))}
         </div>
     </div>
